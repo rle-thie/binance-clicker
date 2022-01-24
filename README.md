@@ -7,5 +7,6 @@ Credits:
 
 * Reverse: concordsdev
 * Clicker: Erouax
-* Fixed: Me
+* Fixed: ImRicard0x & rle-thie
 ![image](https://cdn.discordapp.com/attachments/772669841597136917/792099263899107378/unknown.png)
+compile with "g++ main.cpp -o [filename]"

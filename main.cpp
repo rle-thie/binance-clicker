@@ -12,16 +12,16 @@ using namespace std;
 LRESULT __stdcall mouse_callback(int code, WPARAM wparam, LPARAM lparam) {
 	MSLLHOOKSTRUCT* hook = (MSLLHOOKSTRUCT*)lparam;
 
-	if ((hook->flags == LLMHF_INJECTED) || (hook->flags == LLMHF_LOWER_IL_INJECTED))
-		return false;
+	//if ((hook->flags == LLMHF_INJECTED) || (hook->flags == LLMHF_LOWER_IL_INJECTED))
+	//	return false;
 
 	if ((hook->flags & LLMHF_INJECTED) == LLMHF_INJECTED) {
 		return false;
 	}
 
 	if (wparam != WM_MOUSEMOVE) {
-		if ((hook->flags == LLMHF_INJECTED) || (hook->flags == LLMHF_LOWER_IL_INJECTED))
-			return false;
+		//if ((hook->flags == LLMHF_INJECTED) || (hook->flags == LLMHF_LOWER_IL_INJECTED))
+		//	return false;
 
 		switch (wparam) {
 		case WM_LBUTTONDOWN:
@@ -164,7 +164,7 @@ int main() {
 	};
 
 	for (int i = 0; i < 32; i++)
-		delays[i] = 1000.0f / generate_random_float(11.0f, 15.0f);
+		delays[i] = 1000.0f / generate_random_float(17.0f, 22.0f);
 
 	void* hConsoleOutput = GetStdHandle(STD_OUTPUT_HANDLE);
 	CONSOLE_CURSOR_INFO cursorInfo;
